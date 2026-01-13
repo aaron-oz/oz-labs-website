@@ -29,12 +29,79 @@ class SpatialGPVisualizer {
         this.noiseSeeds = [];
         this.animationId = null;
 
-        // Color palette for the visualization
-        this.colors = {
-            low: { r: 10, g: 10, b: 25 },      // Dark blue-black
-            mid: { r: 99, g: 102, b: 241 },    // Primary purple
-            high: { r: 34, g: 211, b: 238 }    // Cyan accent
+        // Color schemes
+        this.colorSchemes = {
+            rainbow: {
+                name: 'Rainbow',
+                type: 'rainbow',
+                saturation: 0.75,
+                lightness: 0.55
+            },
+            ocean: {
+                name: 'Ocean',
+                type: 'gradient',
+                colors: {
+                    low: { r: 10, g: 10, b: 35 },
+                    mid: { r: 99, g: 102, b: 241 },
+                    high: { r: 34, g: 211, b: 238 }
+                }
+            },
+            thermal: {
+                name: 'Thermal',
+                type: 'gradient',
+                colors: {
+                    low: { r: 15, g: 10, b: 50 },
+                    mid: { r: 220, g: 50, b: 80 },
+                    high: { r: 255, g: 220, b: 80 }
+                }
+            },
+            forest: {
+                name: 'Forest',
+                type: 'gradient',
+                colors: {
+                    low: { r: 10, g: 25, b: 20 },
+                    mid: { r: 34, g: 139, b: 84 },
+                    high: { r: 144, g: 238, b: 144 }
+                }
+            },
+            viridis: {
+                name: 'Viridis',
+                type: 'viridis',
+                // Viridis colormap stops
+                stops: [
+                    { r: 68, g: 1, b: 84 },      // dark purple
+                    { r: 59, g: 82, b: 139 },    // blue-purple
+                    { r: 33, g: 145, b: 140 },   // teal
+                    { r: 94, g: 201, b: 98 },    // green
+                    { r: 253, g: 231, b: 37 }    // yellow
+                ]
+            },
+            magma: {
+                name: 'Magma',
+                type: 'viridis',
+                stops: [
+                    { r: 0, g: 0, b: 4 },        // almost black
+                    { r: 81, g: 18, b: 124 },    // dark purple
+                    { r: 183, g: 55, b: 121 },   // magenta
+                    { r: 252, g: 137, b: 97 },   // orange
+                    { r: 252, g: 253, b: 191 }   // light yellow
+                ]
+            },
+            plasma: {
+                name: 'Plasma',
+                type: 'viridis',
+                stops: [
+                    { r: 13, g: 8, b: 135 },     // dark blue
+                    { r: 126, g: 3, b: 168 },    // purple
+                    { r: 204, g: 71, b: 120 },   // pink
+                    { r: 248, g: 149, b: 64 },   // orange
+                    { r: 240, g: 249, b: 33 }    // yellow
+                ]
+            }
         };
+        this.schemeOrder = ['rainbow', 'ocean', 'thermal', 'forest', 'viridis', 'magma', 'plasma'];
+        this.currentSchemeIndex = 0;
+        this.currentScheme = this.colorSchemes.rainbow;
 
         this.init();
     }
@@ -147,30 +214,85 @@ class SpatialGPVisualizer {
     }
 
     /**
-     * Map GP value to color
-     * Creates smooth gradient from dark to light based on field value
+     * Convert HSL to RGB
+     */
+    hslToRgb(h, s, l) {
+        const c = (1 - Math.abs(2 * l - 1)) * s;
+        const x = c * (1 - Math.abs((h / 60) % 2 - 1));
+        const m = l - c / 2;
+
+        let r, g, b;
+        if (h < 60) { r = c; g = x; b = 0; }
+        else if (h < 120) { r = x; g = c; b = 0; }
+        else if (h < 180) { r = 0; g = c; b = x; }
+        else if (h < 240) { r = 0; g = x; b = c; }
+        else if (h < 300) { r = x; g = 0; b = c; }
+        else { r = c; g = 0; b = x; }
+
+        return {
+            r: Math.round((r + m) * 255),
+            g: Math.round((g + m) * 255),
+            b: Math.round((b + m) * 255)
+        };
+    }
+
+    /**
+     * Map GP value to color based on current scheme
      */
     valueToColor(value) {
         // Normalize value from [-1, 1] to [0, 1]
         const t = (value + 1) / 2;
 
-        let r, g, b;
+        if (this.currentScheme.type === 'rainbow') {
+            // Rainbow: map to full hue spectrum
+            const hue = t * 360;
+            const { r, g, b } = this.hslToRgb(hue, this.currentScheme.saturation, this.currentScheme.lightness);
+            return `rgb(${r}, ${g}, ${b})`;
+        } else if (this.currentScheme.type === 'viridis') {
+            // Multi-stop colormap (viridis, magma, plasma)
+            const stops = this.currentScheme.stops;
+            const numStops = stops.length;
+            const scaledT = t * (numStops - 1);
+            const i = Math.floor(scaledT);
+            const f = scaledT - i;
 
-        if (t < 0.5) {
-            // Interpolate from low to mid
-            const s = t * 2;
-            r = this.colors.low.r + (this.colors.mid.r - this.colors.low.r) * s;
-            g = this.colors.low.g + (this.colors.mid.g - this.colors.low.g) * s;
-            b = this.colors.low.b + (this.colors.mid.b - this.colors.low.b) * s;
+            const c1 = stops[Math.min(i, numStops - 1)];
+            const c2 = stops[Math.min(i + 1, numStops - 1)];
+
+            const r = c1.r + (c2.r - c1.r) * f;
+            const g = c1.g + (c2.g - c1.g) * f;
+            const b = c1.b + (c2.b - c1.b) * f;
+
+            return `rgb(${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)})`;
         } else {
-            // Interpolate from mid to high
-            const s = (t - 0.5) * 2;
-            r = this.colors.mid.r + (this.colors.high.r - this.colors.mid.r) * s;
-            g = this.colors.mid.g + (this.colors.high.g - this.colors.mid.g) * s;
-            b = this.colors.mid.b + (this.colors.high.b - this.colors.mid.b) * s;
-        }
+            // Gradient: interpolate between low, mid, high colors
+            const colors = this.currentScheme.colors;
+            let r, g, b;
 
-        return `rgb(${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)})`;
+            if (t < 0.5) {
+                const s = t * 2;
+                r = colors.low.r + (colors.mid.r - colors.low.r) * s;
+                g = colors.low.g + (colors.mid.g - colors.low.g) * s;
+                b = colors.low.b + (colors.mid.b - colors.low.b) * s;
+            } else {
+                const s = (t - 0.5) * 2;
+                r = colors.mid.r + (colors.high.r - colors.mid.r) * s;
+                g = colors.mid.g + (colors.high.g - colors.mid.g) * s;
+                b = colors.mid.b + (colors.high.b - colors.mid.b) * s;
+            }
+
+            return `rgb(${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)})`;
+        }
+    }
+
+    /**
+     * Cycle to the next color scheme
+     */
+    nextColorScheme() {
+        this.currentSchemeIndex = (this.currentSchemeIndex + 1) % this.schemeOrder.length;
+        const schemeKey = this.schemeOrder[this.currentSchemeIndex];
+        this.currentScheme = this.colorSchemes[schemeKey];
+        return this.currentScheme.name;
     }
 
     /**
@@ -379,8 +501,19 @@ document.head.appendChild(style);
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize GP visualization
     const canvas = document.getElementById('gp-canvas');
+    let gpVisualizer = null;
     if (canvas) {
-        new SpatialGPVisualizer(canvas);
+        gpVisualizer = new SpatialGPVisualizer(canvas);
+    }
+
+    // Initialize color scheme toggle
+    const toggleBtn = document.getElementById('color-scheme-toggle');
+    const schemeLabel = document.getElementById('scheme-label');
+    if (toggleBtn && gpVisualizer) {
+        toggleBtn.addEventListener('click', () => {
+            const newScheme = gpVisualizer.nextColorScheme();
+            schemeLabel.textContent = newScheme;
+        });
     }
 
     // Initialize other components
