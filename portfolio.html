@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | OZ Labs</title>
+    <meta name="description" content="Technical projects, research, and publications by Dr. Aaron Osgood-Zimmerman. Web development, data visualization, spatial statistics, and geospatial analysis.">
+    <link rel="icon" type="image/svg+xml" href="img/oz-labs-favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Portfolio | OZ Labs">
+    <meta property="og:description" content="Technical projects, research, and publications by Dr. Aaron Osgood-Zimmerman. Web development, data visualization, spatial statistics, and geospatial analysis.">
+    <!-- Analytics: Uncomment to activate -->
+    <!-- <script defer data-domain="ozstats.space" src="https://plausible.io/js/script.js"></script> -->
+</head>
+<body>
+    <!-- Spatial GP Background Canvas -->
+    <canvas id="gp-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img class="logo-eye" src="img/oz-labs-logo.svg" alt="OZ Labs">
+                <span class="logo-text">OZ Labs</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="nav-active">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#contact" class="btn btn-nav">Get in Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="section-tag">Portfolio</span>
+                <h1><span class="gradient-text">Portfolio</span></h1>
+                <p>Technical projects, data visualization tools, and over a decade of research in spatial statistics, global health, and beyond.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Projects -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="portfolio-section-heading">
+                <h3>Technical Projects</h3>
+                <p>Interactive tools and platforms built to make complex data accessible and understandable.</p>
+            </div>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-meta">
+                        <span class="project-tag project-tag-type">Web Development</span>
+                        <span class="project-tag project-tag-type">Data Visualization</span>
+                        <span class="project-tag project-tag-role">Live Project</span>
+                    </div>
+                    <h3>See TAO &mdash; Bittensor Network Explorer</h3>
+                    <p>An educational and data visualization platform for the Bittensor decentralized AI network. Features interactive D3.js Sankey diagrams of token flows, animated staking mechanics, a 48-step guided tour of the protocol, searchable vocabulary, and real subnet data. Built with pure HTML/CSS/JS (~4,900 lines of JavaScript).</p>
+                    <a href="https://see-tao.live" target="_blank" rel="noopener" class="project-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                        Visit see-tao.live
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Academic Projects Grid -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="portfolio-section-heading">
+                <h3>Research & Academic</h3>
+                <p>Selected research projects spanning spatial statistics, global health mapping, and geospatial analysis.</p>
+            </div>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-meta">
+                        <span class="project-tag project-tag-journal">Nature, 2018</span>
+                        <span class="project-tag project-tag-role">Lead Author</span>
+                    </div>
+                    <h3>Mapping Child Growth Failure in Africa</h3>
+                    <p>Produced the first high-resolution (5&times;5km) maps of child stunting, wasting, and underweight prevalence across 51 African countries, drawing on survey data from over one million children collected between 2000 and 2015. The maps revealed stark subnational inequalities hidden by national-level averages, providing actionable intelligence for targeting interventions.</p>
+                    <p class="project-impact">Cited by Kofi Annan in a <em>Nature</em> World View letter. Published alongside a companion paper mapping educational attainment across Africa.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-meta">
+                        <span class="project-tag project-tag-journal">Nature, 2020</span>
+                        <span class="project-tag project-tag-role">Co-Lead Author</span>
+                    </div>
+                    <h3>Child Growth Failure Across Low- and Middle-Income Countries</h3>
+                    <p>Extended the geospatial mapping framework to all low- and middle-income countries worldwide, producing comprehensive estimates of child growth failure that informed the Sustainable Development Goals agenda. This expansion required developing scalable spatial modeling techniques capable of handling vastly heterogeneous data sources across diverse geographic contexts.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-meta">
+                        <span class="project-tag project-tag-journal">Nature Medicine, 2021</span>
+                        <span class="project-tag project-tag-role">Co-Lead Author</span>
+                    </div>
+                    <h3>Anemia Prevalence in Women of Reproductive Age</h3>
+                    <p>Mapped annual geospatial estimates of anemia prevalence in women aged 15&ndash;49 across 82 low- and middle-income countries between 2000 and 2018. The analysis identified regions with the greatest burden and most rapid changes, providing evidence to guide targeted public health interventions and resource allocation.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-meta">
+                        <span class="project-tag project-tag-journal">Intl. Statistical Review, 2023</span>
+                        <span class="project-tag project-tag-role">Lead Author</span>
+                    </div>
+                    <h3>Template Model Builder for Spatial Modeling</h3>
+                    <p>Authored a comprehensive statistical review comparing Template Model Builder (TMB) and R-INLA for fitting complex spatial and spatio-temporal models. Includes a large-scale simulation study evaluating both approaches for continuous spatial models via the SPDE approximation, providing practical guidance for applied spatial statisticians choosing between these tools.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-meta">
+                        <span class="project-tag project-tag-status">Under Revision, 2025</span>
+                        <span class="project-tag project-tag-role">Lead Author</span>
+                    </div>
+                    <h3>Joint Modeling of Cancer Incidence &amp; Mortality in Europe</h3>
+                    <p>Developing a joint spatial modeling framework for simultaneously estimating cancer incidence and mortality rates, with application to breast cancer across European countries. A collaboration with researchers at the International Agency for Research on Cancer (IARC), leveraging shared spatial structure between incidence and mortality to improve estimation.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-meta">
+                        <span class="project-tag project-tag-status">Active Research</span>
+                        <span class="project-tag project-tag-role">Lead Researcher</span>
+                    </div>
+                    <h3>Spatial Statistics for Spatial Transcriptomics</h3>
+                    <p>Developing novel spatial statistical models for spatial transcriptomics datasets, extending traditional geostatistical methods to the rapidly growing field of spatially-resolved gene expression data. This work bridges spatial statistics and computational biology, applying Gaussian process methods to understand the spatial organization of gene expression within tissues.</p>
+                    <p class="project-impact">Invited presentation at Yale University, Computational Biology Group (2024).</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Publications -->
+    <section class="publications-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Publications</span>
+                <h2>Selected Publications</h2>
+                <p>Peer-reviewed journal publications. <a href="aoz-2025-summer.pdf" class="inline-link" target="_blank">View full CV</a> for the complete list.</p>
+            </div>
+            <div class="publications-list">
+
+                <div class="pub-item">
+                    <div class="pub-year">2023</div>
+                    <div class="pub-title">A Statistical Introduction to Template Model Builder: A Flexible Tool for Spatial Modeling</div>
+                    <div class="pub-authors"><strong>Osgood-Zimmerman A</strong>, Wakefield J.</div>
+                    <div class="pub-journal">International Statistical Review 91(2)</div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-year">2021</div>
+                    <div class="pub-title">Anemia prevalence in women of reproductive age in low- and middle-income countries between 2000 and 2018</div>
+                    <div class="pub-authors">Kinyoki D*, <strong>Osgood-Zimmerman A</strong>*, Bhattacharjee N*, et al.</div>
+                    <div class="pub-journal">Nature Medicine 27, 1761&ndash;1782</div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-year">2020</div>
+                    <div class="pub-title">Mapping child growth failure across low- and middle-income countries</div>
+                    <div class="pub-authors">Kinyoki D*, <strong>Osgood-Zimmerman A</strong>*, et al.</div>
+                    <div class="pub-journal">Nature 577(7789), 231&ndash;234</div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-year">2019</div>
+                    <div class="pub-title">The association between Zika virus infection and microcephaly in Brazil 2015&ndash;2017</div>
+                    <div class="pub-authors">Brady OJ, <strong>Osgood-Zimmerman A</strong>, et al.</div>
+                    <div class="pub-journal">PLOS Medicine 16(3), e1002755</div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-year">2018</div>
+                    <div class="pub-title">Mapping child growth failure in Africa between 2000 and 2015</div>
+                    <div class="pub-authors"><strong>Osgood-Zimmerman A</strong>*, Millear AI*, et al.</div>
+                    <div class="pub-journal">Nature 555(7694), 41&ndash;47</div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-year">2018</div>
+                    <div class="pub-title">Mapping local variation in educational attainment across Africa</div>
+                    <div class="pub-authors">Graetz N, Friedman J, <strong>Osgood-Zimmerman A</strong>, et al.</div>
+                    <div class="pub-journal">Nature 555(7694), 48&ndash;53</div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-year">2018</div>
+                    <div class="pub-title">Local variation in childhood diarrheal morbidity and mortality in Africa, 2000&ndash;15</div>
+                    <div class="pub-authors">Reiner Jr RC, ..., <strong>Osgood-Zimmerman A</strong>, et al.</div>
+                    <div class="pub-journal">New England Journal of Medicine 379(12), 1128&ndash;1138</div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-year">2017</div>
+                    <div class="pub-title">Mapping under-5 and neonatal mortality in Africa, 2000&ndash;15</div>
+                    <div class="pub-authors">Golding N*, Burstein R*, ..., <strong>Osgood-Zimmerman A</strong>, et al.</div>
+                    <div class="pub-journal">The Lancet 390(10108), 2171&ndash;2182</div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-year">2015</div>
+                    <div class="pub-title">Statistical prediction of global sea level from global temperature</div>
+                    <div class="pub-authors">Bolin D, Guttorp P, ..., <strong>Osgood-Zimmerman A</strong>.</div>
+                    <div class="pub-journal">Statistica Sinica 25, 351&ndash;367</div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-year">2012</div>
+                    <div class="pub-title">Confidence Intervals for the Duration of Mass Extinction</div>
+                    <div class="pub-authors">Wang SC, <strong>Osgood-Zimmerman A</strong>, McVeigh B.</div>
+                    <div class="pub-journal">Paleobiology 38(2), 265&ndash;277</div>
+                </div>
+
+                <p class="pub-note">* denotes co-lead authors</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img class="footer-logo-eye" src="img/oz-labs-logo.svg" alt="OZ Labs">
+                    <span>OZ Labs</span>
+                </div>
+                <p class="footer-tagline">We build the lens between data and insight</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OZ Labs LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

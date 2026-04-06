@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OZ Statistical Consulting | Spatial & Spatio-Temporal Analysis Experts</title>
-    <meta name="description" content="Expert statistical consulting specializing in spatial and spatio-temporal analyses. Transform your data into actionable insights.">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>OZ Labs | Statistics, Machine Learning & Data Visualization</title>
+    <meta name="description" content="Statistical modeling, machine learning, web development, and custom data visualization. We turn complex data into tools, insights, and systems that work.">
+    <link rel="icon" type="image/svg+xml" href="img/oz-labs-favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="OZ Labs | Statistics, Machine Learning & Data Visualization">
+    <meta property="og:description" content="Statistical modeling, machine learning, web development, and custom data visualization. We build the lens between data and insight.">
+    <!-- Analytics: Sign up at https://plausible.io and replace ozstats.space below -->
+    <!-- <script defer data-domain="ozstats.space" src="https://plausible.io/js/script.js"></script> -->
 </head>
 <body>
     <!-- Spatial GP Background Canvas -->
@@ -19,36 +25,8 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                <svg class="logo-oz" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <filter id="logoGp" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
-                            <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="3" seed="8" result="noise"/>
-                            <feColorMatrix type="matrix" values="0 0 0 0 0.388
-                                                                  0 0 0 0 0.400
-                                                                  0 0 0 0 0.945
-                                                                  0 0 0 1 0" in="noise" result="blue"/>
-                            <feColorMatrix type="matrix" values="0 0 0 0 0.133
-                                                                  0 0 0 0 0.827
-                                                                  0 0 0 0 0.933
-                                                                  0 0 0 1 0" in="noise" result="cyan"/>
-                            <feBlend mode="screen" in="blue" in2="cyan" result="blend"/>
-                            <feComponentTransfer in="blend" result="final">
-                                <feFuncR type="table" tableValues="0.04 0.4 0.5 0.13"/>
-                                <feFuncG type="table" tableValues="0.04 0.4 0.5 0.83"/>
-                                <feFuncB type="table" tableValues="0.1 0.95 0.65 0.93"/>
-                                <feFuncA type="linear" slope="1"/>
-                            </feComponentTransfer>
-                        </filter>
-                        <clipPath id="logoClip">
-                            <rect width="40" height="40" rx="6"/>
-                        </clipPath>
-                    </defs>
-                    <g clip-path="url(#logoClip)">
-                        <rect width="40" height="40" filter="url(#logoGp)"/>
-                    </g>
-                    <text x="20" y="27" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="white" text-anchor="middle" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5))">OZ</text>
-                </svg>
-                <span class="logo-text">Statistical Consulting</span>
+                <img class="logo-eye" src="img/oz-labs-logo.svg" alt="OZ Labs">
+                <span class="logo-text">OZ Labs</span>
             </a>
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
@@ -56,9 +34,9 @@
                 <span></span>
             </button>
             <ul class="nav-menu">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="#contact" class="btn btn-nav">Get in Touch</a></li>
             </ul>
         </div>
@@ -67,25 +45,17 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">Spatial Statistics Experts</div>
-            <h1>Transform Your <span class="gradient-text">Spatial Data</span> Into Actionable Insights</h1>
-            <p class="hero-subtitle">Expert statistical consulting with deep expertise in spatial and spatio-temporal analysis. We help organizations make sense of complex geographic and time-varying data.</p>
+            <div class="hero-badge">Technical Consulting</div>
+            <h1>We Build the Lens Between <span class="gradient-text">Data and Insight</span></h1>
+            <p class="hero-sub-tagline">The Insight is Yours.</p>
+            <p class="hero-subtitle">Statistical modeling, machine learning, web development, and custom data visualization. We turn complex data into tools, insights, and systems that work.</p>
             <div class="hero-cta">
                 <a href="#contact" class="btn btn-primary">Start a Project</a>
                 <a href="#services" class="btn btn-secondary">Our Services</a>
             </div>
             <div class="hero-note">
                 <span class="pulse"></span>
-                <span>Live visualization: Spatial Gaussian Process</span>
-            </div>
-            <div class="color-toggle">
-                <button id="color-scheme-toggle" class="btn-toggle" title="Change color scheme">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <circle cx="12" cy="12" r="5"/>
-                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-                    </svg>
-                    <span>Color Scheme: <span id="scheme-label">Rainbow</span></span>
-                </button>
+                <span>Live visualization: Log-Gaussian Cox Process</span>
             </div>
         </div>
     </section>
@@ -94,75 +64,75 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">What We Do</span>
-                <h2>Statistical Consulting Services</h2>
-                <p>From exploratory analysis to advanced modeling, we provide comprehensive statistical support for your research and business needs.</p>
+                <span class="section-tag">What We Build</span>
+                <h2>Our Services</h2>
+                <p>From statistical modeling to interactive web tools, we bring rigorous methodology and clean engineering to every project.</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
+            <div class="services-grid services-grid-4">
+                <a href="services.html#spacetime" class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <h3>Spatial Analysis</h3>
-                    <p>Geostatistics, kriging, spatial autocorrelation, point pattern analysis, and geographic data modeling.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
                     <h3>Spatio-Temporal Modeling</h3>
-                    <p>Dynamic models that capture both spatial dependencies and temporal evolution in your data.</p>
-                </div>
-                <div class="service-card">
+                    <p>Gaussian processes, point processes, geospatial mapping, and spatial transcriptomics. Our deepest expertise.</p>
+                </a>
+                <a href="services.html#stats" class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/>
                         </svg>
                     </div>
-                    <h3>General Statistics</h3>
-                    <p>Regression, hypothesis testing, experimental design, Bayesian analysis, and machine learning.</p>
-                </div>
-                <div class="service-card">
+                    <h3>Statistics & Machine Learning</h3>
+                    <p>Bayesian and frequentist modeling, predictive ML, experimental design, and uncertainty quantification.</p>
+                </a>
+                <a href="services.html#web" class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
                         </svg>
                     </div>
-                    <h3>Research Support</h3>
-                    <p>Study design, power analysis, manuscript preparation, and peer review response support.</p>
-                </div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites, interactive platforms, and data-driven web applications built for performance and clarity.</p>
+                </a>
+                <a href="services.html#dataviz" class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Custom Data Visualization</h3>
+                    <p>Bespoke interactive visualizations that reveal patterns and make complex datasets explorable.</p>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Expertise Section -->
+    <!-- Why OZ Labs Section -->
     <section id="expertise" class="expertise">
         <div class="container">
             <div class="expertise-grid">
                 <div class="expertise-content">
-                    <span class="section-tag">Specialization</span>
-                    <h2>Deep Expertise in Spatial Statistics</h2>
-                    <p>Spatial and spatio-temporal data present unique challenges that require specialized methods. Our core expertise lies in understanding and modeling the complex dependencies inherent in geographic data.</p>
+                    <span class="section-tag">Our Edge</span>
+                    <h2>Why OZ Labs</h2>
+                    <p>We combine academic rigor with practical engineering. Our work is grounded in deep technical expertise and a track record of building systems that matter.</p>
                     <ul class="expertise-list">
                         <li>
-                            <strong>Gaussian Processes</strong>
-                            <span>Flexible non-parametric models for spatial interpolation and prediction</span>
+                            <strong>Ph.D.-Level Rigor</strong>
+                            <span>Statistical and ML methods grounded in solid theory, not black-box heuristics</span>
                         </li>
                         <li>
-                            <strong>Point Process Models</strong>
-                            <span>Analysis of spatial point patterns and event occurrences</span>
+                            <strong>Published Track Record</strong>
+                            <span>Research published in Nature, Nature Medicine, NEJM, and The Lancet</span>
                         </li>
                         <li>
-                            <strong>Hierarchical Spatial Models</strong>
-                            <span>Bayesian frameworks for complex spatial structures</span>
+                            <strong>Full-Stack Capability</strong>
+                            <span>From statistical modeling to production web applications and interactive visualizations</span>
                         </li>
                         <li>
-                            <strong>Space-Time Dynamics</strong>
-                            <span>Models capturing evolution of spatial patterns over time</span>
+                            <strong>Clear Communication</strong>
+                            <span>Complex results translated into tools and insights you can actually use</span>
                         </li>
                     </ul>
                 </div>
@@ -174,7 +144,7 @@
                             <span class="code-dot"></span>
                             <span class="code-title">spatial_gp.R</span>
                         </div>
-                        <pre><code><span class="code-comment"># Spatial Gaussian Process</span>
+                        <pre><code><span class="code-comment"># Spatio-Temporal Gaussian Process</span>
 <span class="code-comment"># Squared Exponential Kernel</span>
 
 <span class="code-fn">kernel</span> <- <span class="code-keyword">function</span>(x1, x2, l, sigma) {
@@ -200,27 +170,13 @@ f <- <span class="code-fn">mvrnorm</span>(n = <span class="code-num">1</span>,
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">About</span>
-                <h2>Your Partner in Statistical Excellence</h2>
-                <p>OZ Statistical Consulting brings rigorous methodology and clear communication to every project.</p>
-            </div>
-            <div class="about-features">
-                <div class="feature">
-                    <div class="feature-number">01</div>
-                    <h3>Rigorous Methods</h3>
-                    <p>We apply state-of-the-art statistical techniques grounded in solid theoretical foundations.</p>
+            <div class="about-teaser">
+                <div class="about-headshot">
+                    <img src="img/headshot.jpg" alt="Dr. Aaron Osgood-Zimmerman" onerror="this.style.display='none'">
                 </div>
-                <div class="feature">
-                    <div class="feature-number">02</div>
-                    <h3>Clear Communication</h3>
-                    <p>Complex results translated into actionable insights you can understand and use.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-number">03</div>
-                    <h3>Reproducible Work</h3>
-                    <p>Fully documented analyses with clean code that you can build upon.</p>
-                </div>
+                <h3>Dr. Aaron Osgood-Zimmerman</h3>
+                <p>Statistician, engineer, and builder. Former professor at Bucknell University and team lead at IHME. Published in Nature, Nature Medicine, and NEJM. Now building OZ Labs full-time.</p>
+                <a href="about.html" class="btn btn-secondary">Learn More</a>
             </div>
         </div>
     </section>
@@ -228,35 +184,42 @@ f <- <span class="code-fn">mvrnorm</span>(n = <span class="code-num">1</span>,
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <span class="section-tag">Get Started</span>
-                    <h2>Let's Discuss Your Project</h2>
-                    <p>Whether you have a specific analysis in mind or need help figuring out the right approach, we're here to help.</p>
-                    <div class="contact-details">
-                        <a href="mailto:contact@ozstats.com" class="contact-link">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                            </svg>
-                            contact@ozstats.com
-                        </a>
+            <div class="contact-centered">
+                <span class="section-tag">Get Started</span>
+                <h2>Let's Discuss Your Project</h2>
+                <p>Whether you have a specific analysis in mind or need help figuring out the right approach, I'm here to help. Reach out and let's talk about what you need.</p>
+                <div class="contact-cta">
+                    <a href="mailto:theozlabs@pm.me?subject=OZ%20Labs%20Inquiry" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        Send an Email
+                    </a>
+                    <a href="mailto:theozlabs@pm.me" class="contact-email-link">theozlabs@pm.me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (hidden until populated — remove style="display:none" to show) -->
+    <section id="testimonials" class="testimonials" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2>What Clients Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <!-- Copy this card template for each testimonial:
+                <div class="testimonial-card">
+                    <blockquote>
+                        <p>"Quote from client about their experience working with OZ Statistical Consulting."</p>
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <strong>Client Name</strong>
+                        <span>Title, Organization</span>
                     </div>
                 </div>
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Tell us about your project</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                </form>
+                -->
             </div>
         </div>
     </section>
@@ -266,32 +229,13 @@ f <- <span class="code-fn">mvrnorm</span>(n = <span class="code-num">1</span>,
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <svg class="logo-oz logo-oz-sm" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <filter id="footerGp" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
-                                <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="3" seed="8" result="noise"/>
-                                <feComponentTransfer in="noise" result="final">
-                                    <feFuncR type="table" tableValues="0.04 0.4 0.5 0.13"/>
-                                    <feFuncG type="table" tableValues="0.04 0.4 0.5 0.83"/>
-                                    <feFuncB type="table" tableValues="0.1 0.95 0.65 0.93"/>
-                                    <feFuncA type="linear" slope="1"/>
-                                </feComponentTransfer>
-                            </filter>
-                            <clipPath id="footerClip">
-                                <rect width="32" height="32" rx="5"/>
-                            </clipPath>
-                        </defs>
-                        <g clip-path="url(#footerClip)">
-                            <rect width="32" height="32" filter="url(#footerGp)"/>
-                        </g>
-                        <text x="16" y="21" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5))">OZ</text>
-                    </svg>
-                    <span>Statistical Consulting</span>
+                    <img class="footer-logo-eye" src="img/oz-labs-logo.svg" alt="OZ Labs">
+                    <span>OZ Labs</span>
                 </div>
-                <p class="footer-tagline">Transforming spatial data into insights</p>
+                <p class="footer-tagline">We build the lens between data and insight</p>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 OZ Statistical Consulting. All rights reserved.</p>
+                <p>&copy; 2026 OZ Labs LLC. All rights reserved.</p>
             </div>
         </div>
     </footer>

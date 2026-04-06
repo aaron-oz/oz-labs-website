@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | OZ Labs</title>
+    <meta name="description" content="About Dr. Aaron Osgood-Zimmerman and OZ Labs — statistics, machine learning, web development, and data visualization consulting.">
+    <link rel="icon" type="image/svg+xml" href="img/oz-labs-favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About | OZ Labs">
+    <meta property="og:description" content="About Dr. Aaron Osgood-Zimmerman — spatial statistician, ML practitioner, and builder.">
+    <!-- <script defer data-domain="ozstats.space" src="https://plausible.io/js/script.js"></script> -->
+</head>
+<body>
+    <canvas id="gp-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img class="logo-eye" src="img/oz-labs-logo.svg" alt="OZ Labs">
+                <span class="logo-text">OZ Labs</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html" class="nav-active">About</a></li>
+                <li><a href="index.html#contact" class="btn btn-nav">Get in Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="section-tag">About</span>
+                <h1>About <span class="gradient-text">OZ Labs</span></h1>
+                <p>Technical consulting rooted in rigorous methodology and clear communication.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-bio">
+                    <div class="about-headshot">
+                        <img src="img/headshot.jpg" alt="Dr. Aaron Osgood-Zimmerman" onerror="this.style.display='none'">
+                    </div>
+                    <h3 style="margin-bottom: var(--space-lg); font-size: 1.5rem;">Dr. Aaron Osgood-Zimmerman</h3>
+                    <p>OZ Labs is a technical consulting practice founded by Aaron Osgood-Zimmerman &mdash; a statistician, engineer, and builder who works at the intersection of data science and software engineering. Whether you need a statistical model that accounts for uncertainty, a machine learning system that runs in production, an interactive web application, or a novel visualization that reveals what your data is actually telling you &mdash; we build it.</p>
+                    <p>Previously, Aaron was an Assistant Professor of Statistics at Bucknell University. Before that, he spent four years at the Institute for Health Metrics and Evaluation (IHME) at the University of Washington, where he led a team of statisticians and software engineers developing high-resolution spatio-temporal models deployed across a large-scale computing cluster. Their work produced 5&times;5km resolution maps of child health outcomes across Africa and low- and middle-income countries, published in <em>Nature</em>, <em>Nature Medicine</em>, <em>The Lancet</em>, and the <em>New England Journal of Medicine</em>. This work was cited by Kofi Annan in a <em>Nature</em> World View letter.</p>
+                    <p>He holds a Ph.D. and M.S. in Statistics from the University of Washington (advisor: Jon Wakefield) and a B.A. in Mathematics and B.S. in Engineering from Swarthmore College.</p>
+                    <p>Beyond academic research, Aaron builds interactive web tools and data visualizations &mdash; including <a href="https://see-tao.live" target="_blank" rel="noopener" class="inline-link">see-tao.live</a>, an educational platform for the Bittensor network featuring interactive D3.js Sankey diagrams and animated token flows.</p>
+                </div>
+                <div class="about-credentials">
+                    <div class="credential-card">
+                        <h4>Education</h4>
+                        <ul>
+                            <li><strong>Ph.D., Statistics</strong>University of Washington, 2022</li>
+                            <li><strong>M.S., Statistics</strong>University of Washington, 2015</li>
+                            <li><strong>B.A., Mathematics &amp; B.S., Engineering</strong>Swarthmore College, 2011</li>
+                        </ul>
+                    </div>
+                    <div class="credential-card">
+                        <h4>Selected Publications</h4>
+                        <ul>
+                            <li>Lead author, <em>Nature</em> (2018)</li>
+                            <li>Co-lead author, <em>Nature</em> (2020)</li>
+                            <li>Co-lead author, <em>Nature Medicine</em> (2021)</li>
+                            <li>Lead author, <em>Intl. Statistical Review</em> (2023)</li>
+                        </ul>
+                    </div>
+                    <div class="credential-card">
+                        <h4>Links</h4>
+                        <div class="credential-links">
+                            <a href="https://scholar.google.com/citations?user=V4g5F6wAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+                            <a href="https://orcid.org/0000-0002-6563-7366" target="_blank" rel="noopener">ORCID</a>
+                            <a href="aoz-2025-summer.pdf" target="_blank">Download CV (PDF)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="expertise" style="background: rgba(13, 13, 24, 0.75); backdrop-filter: blur(10px);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Technical Skills</span>
+                <h2>Tools & Technologies</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <div class="tech-badges">
+                        <span class="tech-badge">R</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">C++</span>
+                        <span class="tech-badge">SQL</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">LaTeX</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Statistics & ML</h4>
+                    <div class="tech-badges">
+                        <span class="tech-badge">Stan</span>
+                        <span class="tech-badge">TMB</span>
+                        <span class="tech-badge">INLA</span>
+                        <span class="tech-badge">scikit-learn</span>
+                        <span class="tech-badge">ggplot2</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Web & Visualization</h4>
+                    <div class="tech-badges">
+                        <span class="tech-badge">HTML / CSS / JS</span>
+                        <span class="tech-badge">D3.js</span>
+                        <span class="tech-badge">SVG</span>
+                        <span class="tech-badge">Netlify</span>
+                        <span class="tech-badge">Vercel</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools</h4>
+                    <div class="tech-badges">
+                        <span class="tech-badge">Git</span>
+                        <span class="tech-badge">Linux</span>
+                        <span class="tech-badge">Bash</span>
+                        <span class="tech-badge">Emacs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img class="footer-logo-eye" src="img/oz-labs-logo.svg" alt="OZ Labs">
+                    <span>OZ Labs</span>
+                </div>
+                <p class="footer-tagline">We build the lens between data and insight</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OZ Labs LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
