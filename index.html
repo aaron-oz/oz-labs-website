@@ -3,19 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OZ Labs | Statistics, Machine Learning & Data Visualization</title>
-    <meta name="description" content="Statistical modeling, machine learning, web development, and custom data visualization. I turn complex data into tools, insights, and systems that work.">
+    <title>OZ Labs | Statistical Consulting: Spatial Statistics, Machine Learning & Data Visualization</title>
+    <meta name="description" content="Statistical consulting by Dr. Aaron Osgood-Zimmerman: spatial statistics, Bayesian modeling, machine learning, web development, and custom data visualization.">
+    <link rel="canonical" href="https://ozlabs.tech/">
     <link rel="icon" type="image/svg+xml" href="img/oz-labs-favicon.svg">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Open Graph -->
+    <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="OZ Labs | Statistics, Machine Learning & Data Visualization">
-    <meta property="og:description" content="Statistical modeling, machine learning, web development, and custom data visualization. The lens between data and insight.">
-    <!-- Analytics: Sign up at https://plausible.io and replace ozstats.space below -->
-    <!-- <script defer data-domain="ozstats.space" src="https://plausible.io/js/script.js"></script> -->
+    <meta property="og:site_name" content="OZ Labs">
+    <meta property="og:url" content="https://ozlabs.tech/">
+    <meta property="og:title" content="OZ Labs | Statistical Consulting: Spatial Statistics, Machine Learning & Data Visualization">
+    <meta property="og:description" content="Statistical consulting by Dr. Aaron Osgood-Zimmerman: spatial statistics, Bayesian modeling, machine learning, web development, and custom data visualization.">
+    <meta property="og:image" content="https://ozlabs.tech/img/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="OZ Labs eye logo with tagline: The Lens Between Data and Insight. The Insight is Yours.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OZ Labs | Statistical Consulting: Spatial Statistics, Machine Learning & Data Visualization">
+    <meta name="twitter:description" content="Statistical consulting by Dr. Aaron Osgood-Zimmerman: spatial statistics, Bayesian modeling, machine learning, web development, and custom data visualization.">
+    <meta name="twitter:image" content="https://ozlabs.tech/img/og-card.png">
+    <!-- Google Search Console: paste the verification tag here when ready, e.g.
+         <meta name="google-site-verification" content="TOKEN">
+         (alternative: verify via a DNS TXT record on ozlabs.tech instead) -->
+    <!-- Analytics: Sign up at https://plausible.io, then uncomment -->
+    <!-- <script defer data-domain="ozlabs.tech" src="https://plausible.io/js/script.js"></script> -->
+    <!-- Structured data. LinkedIn URL pending; add it to the Person sameAs array when available. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://ozlabs.tech/#organization",
+          "name": "OZ Labs LLC",
+          "url": "https://ozlabs.tech/",
+          "logo": "https://ozlabs.tech/img/og-card.png",
+          "email": "aaron@ozlabs.tech",
+          "description": "Statistical consulting practice offering spatial statistics, machine learning, web development, and custom data visualization.",
+          "areaServed": "Worldwide",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "State College",
+            "addressRegion": "PA",
+            "addressCountry": "US"
+          },
+          "founder": { "@id": "https://ozlabs.tech/#aaron" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://ozlabs.tech/#aaron",
+          "name": "Aaron Osgood-Zimmerman",
+          "honorificPrefix": "Dr.",
+          "jobTitle": "Statistical Consultant",
+          "worksFor": { "@id": "https://ozlabs.tech/#organization" },
+          "alumniOf": [
+            { "@type": "CollegeOrUniversity", "name": "University of Washington" },
+            { "@type": "CollegeOrUniversity", "name": "Swarthmore College" }
+          ],
+          "sameAs": [
+            "https://scholar.google.com/citations?user=V4g5F6wAAAAJ",
+            "https://orcid.org/0000-0002-6563-7366"
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Spatial GP Background Canvas -->
@@ -172,7 +228,7 @@ f <- <span class="code-fn">mvrnorm</span>(n = <span class="code-num">1</span>,
         <div class="container">
             <div class="about-teaser">
                 <div class="about-headshot">
-                    <img src="img/headshot.jpg" alt="Dr. Aaron Osgood-Zimmerman" onerror="this.style.display='none'">
+                    <img src="img/headshot.jpg" alt="Dr. Aaron Osgood-Zimmerman, statistical consultant" onerror="this.style.display='none'">
                 </div>
                 <h3>Dr. Aaron Osgood-Zimmerman</h3>
                 <p>Statistician, engineer, and builder. Former professor at Bucknell University and team lead at IHME. Published in Nature, Nature Medicine, and NEJM. Now building OZ Labs full-time.</p>

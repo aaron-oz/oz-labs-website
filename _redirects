@@ -1,1 +1,5 @@
+# Canonical host: ozlabs.tech (no www). Requires www.ozlabs.tech to be
+# added as a domain alias in Netlify for this redirect to take effect.
+https://www.ozlabs.tech/* https://ozlabs.tech/:splat 301!
+
 /projects.html /portfolio.html 301
