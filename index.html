@@ -3,19 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OZ Labs | Statistics, Machine Learning & Data Visualization</title>
-    <meta name="description" content="Statistical modeling, machine learning, web development, and custom data visualization. We turn complex data into tools, insights, and systems that work.">
+    <title>OZ Labs | Statistical Consulting: Spatial Statistics, Machine Learning & Data Visualization</title>
+    <meta name="description" content="Statistical consulting by Dr. Aaron Osgood-Zimmerman: spatial statistics, Bayesian modeling, machine learning, web development, and custom data visualization.">
+    <link rel="canonical" href="https://ozlabs.tech/">
     <link rel="icon" type="image/svg+xml" href="img/oz-labs-favicon.svg">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Open Graph -->
+    <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="OZ Labs | Statistics, Machine Learning & Data Visualization">
-    <meta property="og:description" content="Statistical modeling, machine learning, web development, and custom data visualization. We build the lens between data and insight.">
-    <!-- Analytics: Sign up at https://plausible.io and replace ozstats.space below -->
-    <!-- <script defer data-domain="ozstats.space" src="https://plausible.io/js/script.js"></script> -->
+    <meta property="og:site_name" content="OZ Labs">
+    <meta property="og:url" content="https://ozlabs.tech/">
+    <meta property="og:title" content="OZ Labs | Statistical Consulting: Spatial Statistics, Machine Learning & Data Visualization">
+    <meta property="og:description" content="Statistical consulting by Dr. Aaron Osgood-Zimmerman: spatial statistics, Bayesian modeling, machine learning, web development, and custom data visualization.">
+    <meta property="og:image" content="https://ozlabs.tech/img/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="OZ Labs eye logo with tagline: The Lens Between Data and Insight. The Insight is Yours.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OZ Labs | Statistical Consulting: Spatial Statistics, Machine Learning & Data Visualization">
+    <meta name="twitter:description" content="Statistical consulting by Dr. Aaron Osgood-Zimmerman: spatial statistics, Bayesian modeling, machine learning, web development, and custom data visualization.">
+    <meta name="twitter:image" content="https://ozlabs.tech/img/og-card.png">
+    <!-- Google Search Console: paste the verification tag here when ready, e.g.
+         <meta name="google-site-verification" content="TOKEN">
+         (alternative: verify via a DNS TXT record on ozlabs.tech instead) -->
+    <!-- Analytics: Sign up at https://plausible.io, then uncomment -->
+    <!-- <script defer data-domain="ozlabs.tech" src="https://plausible.io/js/script.js"></script> -->
+    <!-- Structured data. LinkedIn URL pending; add it to the Person sameAs array when available. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://ozlabs.tech/#organization",
+          "name": "OZ Labs LLC",
+          "url": "https://ozlabs.tech/",
+          "logo": "https://ozlabs.tech/img/og-card.png",
+          "email": "aaron@ozlabs.tech",
+          "description": "Statistical consulting practice offering spatial statistics, machine learning, web development, and custom data visualization.",
+          "areaServed": "Worldwide",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "State College",
+            "addressRegion": "PA",
+            "addressCountry": "US"
+          },
+          "founder": { "@id": "https://ozlabs.tech/#aaron" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://ozlabs.tech/#aaron",
+          "name": "Aaron Osgood-Zimmerman",
+          "honorificPrefix": "Dr.",
+          "jobTitle": "Statistical Consultant",
+          "worksFor": { "@id": "https://ozlabs.tech/#organization" },
+          "alumniOf": [
+            { "@type": "CollegeOrUniversity", "name": "University of Washington" },
+            { "@type": "CollegeOrUniversity", "name": "Swarthmore College" }
+          ],
+          "sameAs": [
+            "https://scholar.google.com/citations?user=V4g5F6wAAAAJ",
+            "https://orcid.org/0000-0002-6563-7366"
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Spatial GP Background Canvas -->
@@ -46,12 +102,12 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-badge">Technical Consulting</div>
-            <h1>We Build the Lens Between <span class="gradient-text">Data and Insight</span></h1>
+            <h1>The Lens Between <span class="gradient-text">Data and Insight</span></h1>
             <p class="hero-sub-tagline">The Insight is Yours.</p>
-            <p class="hero-subtitle">Statistical modeling, machine learning, web development, and custom data visualization. We turn complex data into tools, insights, and systems that work.</p>
+            <p class="hero-subtitle">Statistical modeling, machine learning, web development, and custom data visualization. I turn complex data into tools, insights, and systems that work.</p>
             <div class="hero-cta">
                 <a href="#contact" class="btn btn-primary">Start a Project</a>
-                <a href="#services" class="btn btn-secondary">Our Services</a>
+                <a href="#services" class="btn btn-secondary">Explore Services</a>
             </div>
             <div class="hero-note">
                 <span class="pulse"></span>
@@ -64,9 +120,9 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">What We Build</span>
-                <h2>Our Services</h2>
-                <p>From statistical modeling to interactive web tools, we bring rigorous methodology and clean engineering to every project.</p>
+                <span class="section-tag">What I Build</span>
+                <h2>Services</h2>
+                <p>From statistical modeling to interactive web tools, I bring rigorous methodology and clean engineering to every project.</p>
             </div>
             <div class="services-grid services-grid-4">
                 <a href="services.html#spacetime" class="service-card">
@@ -76,7 +132,7 @@
                         </svg>
                     </div>
                     <h3>Spatio-Temporal Modeling</h3>
-                    <p>Gaussian processes, point processes, geospatial mapping, and spatial transcriptomics. Our deepest expertise.</p>
+                    <p>Gaussian processes, point processes, geospatial mapping, and spatial transcriptomics. My deepest expertise.</p>
                 </a>
                 <a href="services.html#stats" class="service-card">
                     <div class="service-icon">
@@ -114,9 +170,9 @@
         <div class="container">
             <div class="expertise-grid">
                 <div class="expertise-content">
-                    <span class="section-tag">Our Edge</span>
+                    <span class="section-tag">My Edge</span>
                     <h2>Why OZ Labs</h2>
-                    <p>We combine academic rigor with practical engineering. Our work is grounded in deep technical expertise and a track record of building systems that matter.</p>
+                    <p>I combine academic rigor with practical engineering. My work is grounded in deep technical expertise and a track record of building systems that matter.</p>
                     <ul class="expertise-list">
                         <li>
                             <strong>Ph.D.-Level Rigor</strong>
@@ -172,11 +228,11 @@ f <- <span class="code-fn">mvrnorm</span>(n = <span class="code-num">1</span>,
         <div class="container">
             <div class="about-teaser">
                 <div class="about-headshot">
-                    <img src="img/headshot.jpg" alt="Dr. Aaron Osgood-Zimmerman" onerror="this.style.display='none'">
+                    <img src="img/headshot.jpg" alt="Dr. Aaron Osgood-Zimmerman, statistical consultant" onerror="this.style.display='none'">
                 </div>
                 <h3>Dr. Aaron Osgood-Zimmerman</h3>
                 <p>Statistician, engineer, and builder. Former professor at Bucknell University and team lead at IHME. Published in Nature, Nature Medicine, and NEJM. Now building OZ Labs full-time.</p>
-                <a href="about.html" class="btn btn-secondary">Learn More</a>
+                <a href="about.html" class="btn btn-secondary">More About Aaron</a>
             </div>
         </div>
     </section>
@@ -189,40 +245,50 @@ f <- <span class="code-fn">mvrnorm</span>(n = <span class="code-num">1</span>,
                 <h2>Let's Discuss Your Project</h2>
                 <p>Whether you have a specific analysis in mind or need help figuring out the right approach, I'm here to help. Reach out and let's talk about what you need.</p>
                 <div class="contact-cta">
-                    <a href="mailto:theozlabs@pm.me?subject=OZ%20Labs%20Inquiry" class="btn btn-primary">
+                    <!-- Booking button is hidden until BOOKING_URL is set in main.js; the email button is then demoted to secondary. -->
+                    <a href="#" class="btn btn-primary booking-cta" target="_blank" rel="noopener" style="display: none;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                            <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+                        </svg>
+                        Book a 30-Minute Intro Call
+                    </a>
+                    <a href="mailto:aaron@ozlabs.tech?subject=OZ%20Labs%20Inquiry" class="btn btn-primary email-cta">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
                             <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                         Send an Email
                     </a>
-                    <a href="mailto:theozlabs@pm.me" class="contact-email-link">theozlabs@pm.me</a>
+                    <a href="mailto:aaron@ozlabs.tech" class="contact-email-link">aaron@ozlabs.tech</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section (hidden until populated — remove style="display:none" to show) -->
-    <section id="testimonials" class="testimonials" style="display: none;">
+    <!--
+    Testimonials section. Re-enable when at least 2 real client quotes are available.
+    To re-enable: move the markup below out of this comment, then duplicate the
+    testimonial-card div (replacing the placeholder text) once per client quote.
+
+    <section id="testimonials" class="testimonials">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Testimonials</span>
                 <h2>What Clients Say</h2>
             </div>
             <div class="testimonials-grid">
-                <!-- Copy this card template for each testimonial:
                 <div class="testimonial-card">
                     <blockquote>
-                        <p>"Quote from client about their experience working with OZ Statistical Consulting."</p>
+                        <p>"Quote from client about their experience working with OZ Labs."</p>
                     </blockquote>
                     <div class="testimonial-author">
                         <strong>Client Name</strong>
                         <span>Title, Organization</span>
                     </div>
                 </div>
-                -->
             </div>
         </div>
     </section>
+    -->
 
     <!-- Footer -->
     <footer class="footer">
@@ -232,7 +298,7 @@ f <- <span class="code-fn">mvrnorm</span>(n = <span class="code-num">1</span>,
                     <img class="footer-logo-eye" src="img/oz-labs-logo.svg" alt="OZ Labs">
                     <span>OZ Labs</span>
                 </div>
-                <p class="footer-tagline">We build the lens between data and insight</p>
+                <p class="footer-tagline">The lens between data and insight</p>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 OZ Labs LLC. All rights reserved.</p>

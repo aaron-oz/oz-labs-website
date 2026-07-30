@@ -10,6 +10,17 @@
  */
 
 // ============================================
+// Site config
+// ============================================
+
+// Scheduling link for the "Book a 30-Minute Intro Call" buttons (class
+// .booking-cta). Set to the real booking URL, e.g. 'https://cal.com/<username>/intro',
+// to enable them; while null the buttons stay hidden and the email CTA
+// remains the primary action.
+const BOOKING_URL = null;
+
+
+// ============================================
 // Shared color palettes
 // ============================================
 
@@ -179,6 +190,7 @@ class BaseVisualizer {
                     if (opt.value === param.value) o.selected = true;
                     sel.appendChild(o);
                 }
+                sel.setAttribute('aria-label', param.label);
                 sel.addEventListener('change', () => param.onChange(sel.value));
                 wrapper.appendChild(lbl);
                 wrapper.appendChild(sel);
@@ -191,6 +203,7 @@ class BaseVisualizer {
                 inp.max = param.max;
                 inp.step = param.step || 'any';
                 inp.value = param.value;
+                inp.setAttribute('aria-label', param.label);
                 inp.addEventListener('input', () => param.onChange(parseFloat(inp.value)));
                 wrapper.appendChild(lbl);
                 wrapper.appendChild(inp);
@@ -2182,6 +2195,24 @@ document.head.appendChild(style);
 
 
 // ============================================
+// Booking CTA
+// ============================================
+
+function initBookingCTA() {
+    if (!BOOKING_URL) return;
+    document.querySelectorAll('.booking-cta').forEach(btn => {
+        btn.href = BOOKING_URL;
+        btn.style.display = '';
+    });
+    // Booking becomes the primary action; demote the email button.
+    document.querySelectorAll('.email-cta').forEach(btn => {
+        btn.classList.remove('btn-primary');
+        btn.classList.add('btn-secondary');
+    });
+}
+
+
+// ============================================
 // Initialize
 // ============================================
 
@@ -2210,4 +2241,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initSmoothScroll();
     initScrollAnimations();
+    initBookingCTA();
 });

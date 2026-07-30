@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OZ Labs Notes</title>
+    <link>https://ozlabs.tech/notes/</link>
+    <description>Technical notes on statistics, machine learning, and data visualization from OZ Labs.</description>
+    <language>en-us</language>
+    <atom:link href="https://ozlabs.tech/notes/feed.xml" rel="self" type="application/rss+xml"/>
+    <!-- Add one item per published post, newest first:
+    <item>
+      <title>Post Title</title>
+      <link>https://ozlabs.tech/notes/POST_SLUG.html</link>
+      <guid>https://ozlabs.tech/notes/POST_SLUG.html</guid>
+      <pubDate>Wed, 29 Jul 2026 12:00:00 GMT</pubDate>
+      <description>One-paragraph summary of the post.</description>
+    </item>
+    -->
+  </channel>
+</rss>

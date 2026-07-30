@@ -895,7 +895,7 @@ section {
     margin-bottom: 0;
 }
 
-.credential-card h4 {
+.credential-card h3 {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -1429,7 +1429,7 @@ body.dataviz-active .viz-controls {
     padding: var(--space-xl) var(--space-3xl) var(--space-3xl);
 }
 
-.tab-panel h3 {
+.tab-panel h2 {
     font-size: 1.5rem;
     margin-bottom: var(--space-md);
     text-align: center;
@@ -1494,7 +1494,7 @@ body.dataviz-active .viz-controls {
     margin-bottom: var(--space-2xl);
 }
 
-.portfolio-section-heading h3 {
+.portfolio-section-heading h2 {
     font-size: 1.25rem;
     color: var(--color-text);
     margin-bottom: var(--space-sm);
@@ -1553,7 +1553,7 @@ body.dataviz-active .viz-controls {
     padding: var(--space-xl);
 }
 
-.skill-category h4 {
+.skill-category h3 {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
