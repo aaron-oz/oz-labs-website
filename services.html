@@ -197,7 +197,12 @@
                 <h2>Have a project in mind?</h2>
                 <p>Let's talk about what you need and how we can help.</p>
                 <div class="contact-cta">
-                    <a href="mailto:aaron@ozlabs.tech?subject=OZ%20Labs%20Inquiry" class="btn btn-primary">
+                    <!-- Booking button is hidden until BOOKING_URL is set in main.js; the email button is then demoted to secondary. -->
+                    <a href="#" class="btn btn-primary booking-cta" target="_blank" rel="noopener" style="display: none;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                        Book a 30-Minute Intro Call
+                    </a>
+                    <a href="mailto:aaron@ozlabs.tech?subject=OZ%20Labs%20Inquiry" class="btn btn-primary email-cta">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                         Send an Email
                     </a>

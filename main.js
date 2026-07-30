@@ -10,6 +10,17 @@
  */
 
 // ============================================
+// Site config
+// ============================================
+
+// Scheduling link for the "Book a 30-Minute Intro Call" buttons (class
+// .booking-cta). Set to the real booking URL, e.g. 'https://cal.com/<username>/intro',
+// to enable them; while null the buttons stay hidden and the email CTA
+// remains the primary action.
+const BOOKING_URL = null;
+
+
+// ============================================
 // Shared color palettes
 // ============================================
 
@@ -2182,6 +2193,24 @@ document.head.appendChild(style);
 
 
 // ============================================
+// Booking CTA
+// ============================================
+
+function initBookingCTA() {
+    if (!BOOKING_URL) return;
+    document.querySelectorAll('.booking-cta').forEach(btn => {
+        btn.href = BOOKING_URL;
+        btn.style.display = '';
+    });
+    // Booking becomes the primary action; demote the email button.
+    document.querySelectorAll('.email-cta').forEach(btn => {
+        btn.classList.remove('btn-primary');
+        btn.classList.add('btn-secondary');
+    });
+}
+
+
+// ============================================
 // Initialize
 // ============================================
 
@@ -2210,4 +2239,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initSmoothScroll();
     initScrollAnimations();
+    initBookingCTA();
 });
