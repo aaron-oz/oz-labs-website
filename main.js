@@ -190,6 +190,7 @@ class BaseVisualizer {
                     if (opt.value === param.value) o.selected = true;
                     sel.appendChild(o);
                 }
+                sel.setAttribute('aria-label', param.label);
                 sel.addEventListener('change', () => param.onChange(sel.value));
                 wrapper.appendChild(lbl);
                 wrapper.appendChild(sel);
@@ -202,6 +203,7 @@ class BaseVisualizer {
                 inp.max = param.max;
                 inp.step = param.step || 'any';
                 inp.value = param.value;
+                inp.setAttribute('aria-label', param.label);
                 inp.addEventListener('input', () => param.onChange(parseFloat(inp.value)));
                 wrapper.appendChild(lbl);
                 wrapper.appendChild(inp);
