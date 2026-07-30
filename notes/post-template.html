@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- POST TEMPLATE: copy this file to a slug-named file (e.g. gp-kernels.html),
+         then replace every POST_* placeholder. This template itself is never linked. -->
+    <title>POST_TITLE | OZ Labs Notes</title>
+    <meta name="description" content="POST_DESCRIPTION">
+    <link rel="canonical" href="https://ozlabs.tech/notes/POST_SLUG.html">
+    <link rel="alternate" type="application/rss+xml" title="OZ Labs Notes" href="https://ozlabs.tech/notes/feed.xml">
+    <link rel="icon" type="image/svg+xml" href="../img/oz-labs-favicon.svg">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="OZ Labs">
+    <meta property="og:url" content="https://ozlabs.tech/notes/POST_SLUG.html">
+    <meta property="og:title" content="POST_TITLE | OZ Labs Notes">
+    <meta property="og:description" content="POST_DESCRIPTION">
+    <meta property="og:image" content="https://ozlabs.tech/img/og-card.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://ozlabs.tech/img/og-card.png">
+</head>
+<body>
+    <canvas id="gp-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img class="logo-eye" src="../img/oz-labs-logo.svg" alt="OZ Labs">
+                <span class="logo-text">OZ Labs</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../portfolio.html">Portfolio</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../index.html#contact" class="btn btn-nav">Get in Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="section-tag">POST_DATE_ISO</span>
+                <h1>POST_TITLE</h1>
+                <p>POST_DESCRIPTION</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects-section">
+        <div class="container" style="max-width: 760px;">
+            <article class="tab-panel">
+                <p>POST_BODY: write the note here in plain HTML paragraphs. Use the
+                site's existing classes (code-block, tech-badge, inline-link) for
+                code snippets, tags, and links.</p>
+            </article>
+            <p style="margin-top: var(--space-xl);"><a href="index.html" class="inline-link">&larr; All notes</a></p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img class="footer-logo-eye" src="../img/oz-labs-logo.svg" alt="OZ Labs">
+                    <span>OZ Labs</span>
+                </div>
+                <p class="footer-tagline">The lens between data and insight</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OZ Labs LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes | OZ Labs - Statistical Consulting</title>
+    <meta name="description" content="Technical notes on statistics, machine learning, and data visualization from OZ Labs.">
+    <!-- Remove the noindex tag when the first post is published. Also: add each
+         published post to /sitemap.xml and an <item> to notes/feed.xml, and
+         consider adding Notes to the site nav (currently hidden by design). -->
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="https://ozlabs.tech/notes/">
+    <link rel="alternate" type="application/rss+xml" title="OZ Labs Notes" href="https://ozlabs.tech/notes/feed.xml">
+    <link rel="icon" type="image/svg+xml" href="../img/oz-labs-favicon.svg">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="OZ Labs">
+    <meta property="og:url" content="https://ozlabs.tech/notes/">
+    <meta property="og:title" content="Notes | OZ Labs - Statistical Consulting">
+    <meta property="og:description" content="Technical notes on statistics, machine learning, and data visualization from OZ Labs.">
+    <meta property="og:image" content="https://ozlabs.tech/img/og-card.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://ozlabs.tech/img/og-card.png">
+</head>
+<body>
+    <canvas id="gp-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img class="logo-eye" src="../img/oz-labs-logo.svg" alt="OZ Labs">
+                <span class="logo-text">OZ Labs</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../portfolio.html">Portfolio</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../index.html#contact" class="btn btn-nav">Get in Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="section-tag">Notes</span>
+                <h1><span class="gradient-text">Notes</span></h1>
+                <p>Technical notes on statistics, machine learning, and data visualization.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-grid">
+                <!--
+                To publish a post (in order):
+                1. Copy post-template.html to a slug-named file, e.g. notes/my-post.html,
+                   and fill in the title, date, description, and body.
+                2. Add a card for it here, replacing this comment block's placeholder:
+                <div class="project-card">
+                    <div class="project-meta">
+                        <span class="project-tag project-tag-type">Topic</span>
+                        <span class="project-tag project-tag-role">2026-07-29</span>
+                    </div>
+                    <h3>Post Title</h3>
+                    <p>One-paragraph summary of the post.</p>
+                    <a href="my-post.html" class="project-link">Read note</a>
+                </div>
+                3. Add an <item> to notes/feed.xml.
+                4. Add the post URL to /sitemap.xml.
+                5. Remove the noindex meta tag in this file's head.
+                -->
+                <p style="color: var(--color-text-muted); text-align: center; grid-column: 1 / -1;">No notes published yet. Check back soon.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img class="footer-logo-eye" src="../img/oz-labs-logo.svg" alt="OZ Labs">
+                    <span>OZ Labs</span>
+                </div>
+                <p class="footer-tagline">The lens between data and insight</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OZ Labs LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>
