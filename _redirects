@@ -2,4 +2,11 @@
 # added as a domain alias in Netlify for this redirect to take effect.
 https://www.ozlabs.tech/* https://ozlabs.tech/:splat 301!
 
+# Legacy domain: ozstats.space (registered through spring 2028) is a
+# domain alias of this site; 301 everything to the canonical host.
+https://ozstats.space/* https://ozlabs.tech/:splat 301!
+http://ozstats.space/* https://ozlabs.tech/:splat 301!
+https://www.ozstats.space/* https://ozlabs.tech/:splat 301!
+http://www.ozstats.space/* https://ozlabs.tech/:splat 301!
+
 /projects.html /portfolio.html 301
