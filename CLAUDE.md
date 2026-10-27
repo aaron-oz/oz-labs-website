@@ -14,7 +14,7 @@ Static website for **OZ Labs LLC**, a technical consulting practice offering sta
 - **about.html** — Full bio, education credentials, technical skills grid, publication highlights, Google Scholar / ORCID / CV links
 - **styles.css** — All styling with CSS custom properties in `:root`. OZ Labs palette: cyan (#00f0ff), purple (#a855f7), magenta (#ff00ff), green (#00ff88). Responsive breakpoints at 968px and 768px
 - **main.js** — `SpatialGPVisualizer` class renders animated GP background on `<canvas>` (pauses when tab hidden). Also handles navigation, smooth scroll, tab switching with hash deep-linking, and scroll-triggered animations via IntersectionObserver
-- **img/**: `headshot.jpg` (about page photo), `oz-labs-favicon.svg` (iris/network logo favicon), `oz-labs-logo.svg` (nav/footer eye logo), `og-card.png` (1200×630 social share card), `apple-touch-icon.png` (180×180)
+- **img/**: `headshot.jpg` (about page photo), `ozlabs-favicon.svg` (seed favicon, mid crop: plant, eye, upper ring; browser tab icon), `ozlabs-favicon-full.svg` (seed favicon, full crop: both rings, lower one cut off; nav logo), `ozlabs-logo.svg` (full seed logo: plant, eye, two rings; footer), `og-card.png` (1200×630 social share card with the seed logo), `apple-touch-icon.png` (180×180, seed favicon on the dark background). `/favicon.ico` (16/32/48 px) is the fallback icon. Sources: `~/Dropbox/OZ-Labs/logo/ozlabs-seed-*` (2026-10-21)
 - **notes/**: hidden blog scaffold (not in nav, `noindex` until first post): `index.html` list page, `post-template.html`, `feed.xml` (RSS). Publishing steps documented in comments inside each file
 - **sitemap.xml** / **robots.txt**: hand-maintained; add new pages/posts to the sitemap manually
 - **oz-labs-logo-dark.svg** / **oz-labs-logo-light.svg** — Full eye logo SVGs (for marketing/print use)
@@ -36,7 +36,7 @@ python3 -m http.server 8000
 
 - Dark theme (bg #06060c) with semi-transparent glass-morphism section backdrops over the GP canvas background
 - The GP visualizer supports 7 color schemes (rainbow, ocean, thermal, forest, viridis, magma, plasma) cycled via a toggle button on the landing page hero
-- Nav logo is the OZ Labs eye/iris network SVG with cyan-to-purple-to-magenta-to-green gradient
+- Nav logo is the full seed favicon (`img/ozlabs-favicon-full.svg`, 48px); the footer shows the full seed logo (`img/ozlabs-logo.svg`, 120px tall) beside "OZ / Labs" on two lines (`.footer-wordmark`)
 - Fonts: Inter (body) + JetBrains Mono (code/monospace) loaded from Google Fonts
 - Contact uses `mailto:aaron@ozlabs.tech` (no form backend)
 - **Booking CTA**: "Book a 30-Minute Intro Call" buttons (class `.booking-cta`) exist in the contact sections but stay hidden until `BOOKING_URL` is set at the top of `main.js`; enabling them also demotes the email buttons (`.email-cta`) to secondary styling

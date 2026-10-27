@@ -738,14 +738,23 @@ section {
     margin-bottom: var(--space-sm);
 }
 
+.footer-wordmark {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: var(--color-text);
+}
+
 .footer-brand .logo-oz {
     width: 32px;
     height: 32px;
 }
 
 .footer-logo-eye {
-    width: 80px;
-    height: auto;
+    width: auto;
+    height: 120px;
 }
 
 .footer-tagline {
@@ -1250,7 +1259,7 @@ section {
 }
 
 /* ============================================
-   Logo (OZ Labs eye SVG)
+   Logo (nav: full seed favicon SVG; the footer uses the full seed logo)
    ============================================ */
 
 .logo-eye {
